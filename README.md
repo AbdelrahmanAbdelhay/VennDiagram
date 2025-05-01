@@ -5,8 +5,8 @@
 ###### Set Difference
 ## Enhancements
 ###### Improve Venn Diagram shapes -> *Bigger* -> *Centralized*
-###### Set elements should be inside the Venn Diagrams
-###### Add other Set operations -> *Systematic Difference* -> *Additional Set C*
+###### Set elements should be displayed inside the Venn Diagrams
+###### Add other Set operations -> *Systematic Difference* -> *Additional Set C* -> *Show set seperatly*
 ###### Other UI enhancements (optional)
 ## Project Description
 > Küme İşlemleri ve Venn Diyagramı Uygulaması:
