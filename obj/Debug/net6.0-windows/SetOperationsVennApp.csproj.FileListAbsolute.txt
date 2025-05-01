@@ -1,0 +1,16 @@
+C:\Users\abdel\Downloads\SetOperationsVennApp\bin\Debug\net6.0-windows\SetOperationsVennApp.exe
+C:\Users\abdel\Downloads\SetOperationsVennApp\bin\Debug\net6.0-windows\SetOperationsVennApp.deps.json
+C:\Users\abdel\Downloads\SetOperationsVennApp\bin\Debug\net6.0-windows\SetOperationsVennApp.runtimeconfig.json
+C:\Users\abdel\Downloads\SetOperationsVennApp\bin\Debug\net6.0-windows\SetOperationsVennApp.dll
+C:\Users\abdel\Downloads\SetOperationsVennApp\bin\Debug\net6.0-windows\SetOperationsVennApp.pdb
+C:\Users\abdel\Downloads\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abdel\Downloads\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.AssemblyInfoInputs.cache
+C:\Users\abdel\Downloads\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.AssemblyInfo.cs
+C:\Users\abdel\Downloads\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.csproj.CoreCompileInputs.cache
+C:\Users\abdel\Downloads\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.dll
+C:\Users\abdel\Downloads\SetOperationsVennApp\obj\Debug\net6.0-windows\refint\SetOperationsVennApp.dll
+C:\Users\abdel\Downloads\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.pdb
+C:\Users\abdel\Downloads\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.genruntimeconfig.cache
+C:\Users\abdel\Downloads\SetOperationsVennApp\obj\Debug\net6.0-windows\ref\SetOperationsVennApp.dll
+C:\Users\abdel\Downloads\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.MainForm.resources
+C:\Users\abdel\Downloads\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.csproj.GenerateResource.cache
