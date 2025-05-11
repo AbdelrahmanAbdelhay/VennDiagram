@@ -4,53 +4,190 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace SetOperationsVennApp
+namespace KumeIslemleriVenn
 {
-    public partial class MainForm : Form
+    public partial class KumeForm : Form
     {
-        public MainForm()
+        private Stack<string> operationHistory = new Stack<string>();
+        private Stack<string> undoHistory = new Stack<string>();
+
+        public KumeForm()
         {
             InitializeComponent();
         }
 
-        private HashSet<string> ParseInput(string input)
+        private bool ValidateInput(string input, out string errorMessage)
         {
-            return new HashSet<string>(
-                input.Split(',').Select(s => s.Trim()).Where(s => !string.IsNullOrEmpty(s))
-            );
+            errorMessage = "";
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                errorMessage = "Küme boş olamaz.";
+                return false;
+            }
+            var elements = input.Split(',').Select(s => s.Trim());
+            if (elements.Any(s => string.IsNullOrEmpty(s)))
+            {
+                errorMessage = "Geçersiz eleman bulundu.";
+                return false;
+            }
+            return true;
+        }
+
+        private HashSet<string> ParseInputHashSet(string input)
+        {
+            return new HashSet<string>(input.Split(',').Select(s => s.Trim()).Where(s => !string.IsNullOrEmpty(s)));
+        }
+
+        private SortedSet<string> ParseInputSortedSet(string input)
+        {
+            return new SortedSet<string>(input.Split(',').Select(s => s.Trim()).Where(s => !string.IsNullOrEmpty(s)));
         }
 
         private void btnUnion_Click(object sender, EventArgs e)
         {
-            var A = ParseInput(txtSetA.Text);
-            var B = ParseInput(txtSetB.Text);
+            if (!ValidateInput(txtSetA.Text, out string errorA))
+            {
+                lblResult.Text = "Küme A: " + errorA;
+                return;
+            }
+            if (!ValidateInput(txtSetB.Text, out string errorB))
+            {
+                lblResult.Text = "Küme B: " + errorB;
+                return;
+            }
+            var A = ParseInputHashSet(txtSetA.Text);
+            var B = ParseInputHashSet(txtSetB.Text);
             var union = new HashSet<string>(A);
             union.UnionWith(B);
-            lblResult.Text = "Union: " + string.Join(", ", union);
-            DrawVennDiagram(A, B, union, "union");
+            var sortedUnion = new SortedSet<string>(union);
+            lblResult.Text = "Union: " + string.Join(", ", sortedUnion);
+            operationHistory.Push("Union: " + string.Join(", ", sortedUnion));
+            undoHistory.Push("Union: " + string.Join(", ", sortedUnion));
+            UpdateOperationHistoryList();
+            DrawVennDiagram(A, B, sortedUnion, "union");
         }
 
         private void btnIntersection_Click(object sender, EventArgs e)
         {
-            var A = ParseInput(txtSetA.Text);
-            var B = ParseInput(txtSetB.Text);
+            if (!ValidateInput(txtSetA.Text, out string errorA))
+            {
+                lblResult.Text = "Küme A: " + errorA;
+                return;
+            }
+            if (!ValidateInput(txtSetB.Text, out string errorB))
+            {
+                lblResult.Text = "Küme B: " + errorB;
+                return;
+            }
+            var A = ParseInputHashSet(txtSetA.Text);
+            var B = ParseInputHashSet(txtSetB.Text);
             var intersect = new HashSet<string>(A);
             intersect.IntersectWith(B);
-            lblResult.Text = "Intersection: " + string.Join(", ", intersect);
-            DrawVennDiagram(A, B, intersect, "intersection");
+            var sortedIntersect = new SortedSet<string>(intersect);
+            lblResult.Text = "Intersection: " + string.Join(", ", sortedIntersect);
+            operationHistory.Push("Intersection: " + string.Join(", ", sortedIntersect));
+            undoHistory.Push("Intersection: " + string.Join(", ", sortedIntersect));
+            UpdateOperationHistoryList();
+            DrawVennDiagram(A, B, sortedIntersect, "intersection");
         }
 
         private void btnDifference_Click(object sender, EventArgs e)
         {
-            var A = ParseInput(txtSetA.Text);
-            var B = ParseInput(txtSetB.Text);
+            if (!ValidateInput(txtSetA.Text, out string errorA))
+            {
+                lblResult.Text = "Küme A: " + errorA;
+                return;
+            }
+            if (!ValidateInput(txtSetB.Text, out string errorB))
+            {
+                lblResult.Text = "Küme B: " + errorB;
+                return;
+            }
+            var A = ParseInputHashSet(txtSetA.Text);
+            var B = ParseInputHashSet(txtSetB.Text);
             var difference = new HashSet<string>(A);
             difference.ExceptWith(B);
-            lblResult.Text = "A - B: " + string.Join(", ", difference);
-            DrawVennDiagram(A, B, difference, "difference");
+            var sortedDifference = new SortedSet<string>(difference);
+            lblResult.Text = "A - B: " + string.Join(", ", sortedDifference);
+            operationHistory.Push("A - B: " + string.Join(", ", sortedDifference));
+            undoHistory.Push("A - B: " + string.Join(", ", sortedDifference));
+            UpdateOperationHistoryList();
+            DrawVennDiagram(A, B, sortedDifference, "difference");
         }
 
-        private void DrawVennDiagram(HashSet<string> A, HashSet<string> B, HashSet<string> highlight, string mode)
+        private void btnReverseDifference_Click(object sender, EventArgs e)
+        {
+            if (!ValidateInput(txtSetA.Text, out string errorA))
+            {
+                lblResult.Text = "Küme A: " + errorA;
+                return;
+            }
+            if (!ValidateInput(txtSetB.Text, out string errorB))
+            {
+                lblResult.Text = "Küme B: " + errorB;
+                return;
+            }
+            var A = ParseInputHashSet(txtSetA.Text);
+            var B = ParseInputHashSet(txtSetB.Text);
+            var difference = new HashSet<string>(B);
+            difference.ExceptWith(A);
+            var sortedDifference = new SortedSet<string>(difference);
+            lblResult.Text = "B - A: " + string.Join(", ", sortedDifference);
+            operationHistory.Push("B - A: " + string.Join(", ", sortedDifference));
+            undoHistory.Push("B - A: " + string.Join(", ", sortedDifference));
+            UpdateOperationHistoryList();
+            DrawVennDiagram(B, A, sortedDifference, "reverse_difference");
+        }
+
+        private void btnSymmetricDifference_Click(object sender, EventArgs e)
+        {
+            if (!ValidateInput(txtSetA.Text, out string errorA))
+            {
+                lblResult.Text = "Küme A: " + errorA;
+                return;
+            }
+            if (!ValidateInput(txtSetB.Text, out string errorB))
+            {
+                lblResult.Text = "Küme B: " + errorB;
+                return;
+            }
+            var A = ParseInputHashSet(txtSetA.Text);
+            var B = ParseInputHashSet(txtSetB.Text);
+            var symmetricDifference = new HashSet<string>(A);
+            symmetricDifference.SymmetricExceptWith(B);
+            var sortedSymmetricDifference = new SortedSet<string>(symmetricDifference);
+            lblResult.Text = "Symmetric Difference: " + string.Join(", ", sortedSymmetricDifference);
+            operationHistory.Push("Symmetric Difference: " + string.Join(", ", sortedSymmetricDifference));
+            undoHistory.Push("Symmetric Difference: " + string.Join(", ", sortedSymmetricDifference));
+            UpdateOperationHistoryList();
+            DrawVennDiagram(A, B, sortedSymmetricDifference, "symmetric_difference");
+        }
+
+        private void btnUndo_Click(object sender, EventArgs e)
+        {
+            if (undoHistory.Count > 0)
+            {
+                string lastOperation = undoHistory.Pop();
+                lblResult.Text = "Geri Alındı: " + lastOperation;
+            }
+            else
+            {
+                lblResult.Text = "Geri alınacak işlem yok.";
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtSetA.Text = "";
+            txtSetB.Text = "";
+            lblResult.Text = "Result:";
+            operationHistory.Clear();
+            undoHistory.Clear();
+            lstOperationHistory.Items.Clear();
+            panelVenn.Invalidate();
+        }
+
+        private void DrawVennDiagram(HashSet<string> A, HashSet<string> B, SortedSet<string> highlight, string mode)
         {
             panelVenn.Invalidate();
             panelVenn.Paint += (s, e) =>
@@ -75,38 +212,17 @@ namespace SetOperationsVennApp
                     g.DrawString(content, font, Brushes.Black, 60, 10);
                 else if (mode == "difference")
                     g.DrawString(content, font, Brushes.Black, 40, 80);
+                else if (mode == "reverse_difference")
+                    g.DrawString(content, font, Brushes.Black, 150, 80);
+                else if (mode == "symmetric_difference")
+                    g.DrawString(content, font, Brushes.Black, 70, 10);
             };
         }
 
-        private List<string> onlyA = new List<string>();
-        private List<string> onlyB = new List<string>();
-        private List<string> both = new List<string>();
-
-        private void panelVenn_Paint(object sender, PaintEventArgs e)
+        private void UpdateOperationHistoryList()
         {
-            Graphics g = e.Graphics;
-            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-
-            Rectangle leftCircle = new Rectangle(100, 50, 180, 180);
-            Rectangle rightCircle = new Rectangle(200, 50, 180, 180);
-
-            using (Brush brush = new SolidBrush(Color.FromArgb(100, Color.Blue)))
-                g.FillEllipse(brush, leftCircle);
-            using (Brush brush = new SolidBrush(Color.FromArgb(100, Color.Red)))
-                g.FillEllipse(brush, rightCircle);
-
-            using (Pen pen = new Pen(Color.Blue, 2))
-                g.DrawEllipse(pen, leftCircle);
-            using (Pen pen = new Pen(Color.Red, 2))
-                g.DrawEllipse(pen, rightCircle);
-
-            g.DrawString("Set A", this.Font, Brushes.Blue, 110, 30);
-            g.DrawString("Set B", this.Font, Brushes.Red, 290, 30);
-
-            // Draw results
-            g.DrawString("Only A:\n" + string.Join(", ", onlyA), this.Font, Brushes.Black, new RectangleF(50, 110, 100, 150));
-            g.DrawString("Only B:\n" + string.Join(", ", onlyB), this.Font, Brushes.Black, new RectangleF(330, 110, 100, 150));
-            g.DrawString("Both:\n" + string.Join(", ", both), this.Font, Brushes.Black, new RectangleF(190, 120, 100, 150));
+            lstOperationHistory.Items.Clear();
+            lstOperationHistory.Items.AddRange(operationHistory.ToArray());
         }
     }
 }
