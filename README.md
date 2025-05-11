@@ -12,7 +12,7 @@
 ###### Highlights the result area on the Venn diagram
 ###### Uses multiple data structures: *HashSet*, *Array*, *Stack*, *SortedSet*.
 ## Sample Sets preview
-!![image](https://github.com/user-attachments/assets/ba9dc7cb-99cc-4213-8d0f-768eb9cba54c)
+![image](https://github.com/user-attachments/assets/cb7f3ddf-df35-457d-bbc8-b7d29092123b)
 ## Download Instructions
 ##### Clone the repository:
 `git clone https://github.com/AbdelrahmanAbdelhay/VennDiagram`
