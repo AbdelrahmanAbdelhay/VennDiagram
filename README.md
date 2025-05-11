@@ -1,16 +1,20 @@
 # Venn Diagram
-## Features Included
+> A C# Windows Forms application for performing set operations and visualising results with a Venn diagram. Perform basic set operations such as: union, intersection and other operations that follow fundamental set theories.
+## Venn Diagram Operations
 ###### Set Union
 ###### Set Intersection
 ###### Set Difference
-## Enhancements
-###### Improve Venn Diagram shapes -> *Bigger* -> *Centralized*
-###### Set elements should be displayed inside the Venn Diagrams
-###### Add other Set operations -> *Systematic Difference* -> *Additional Set C* -> *Show set seperatly*
-###### Using at least 4 Data Structures - [Hash , List , Stack , Trie]
-###### Other UI enhancements (optional)
-## Project Description
-> Küme İşlemleri ve Venn Diyagramı Uygulaması:
-iki veya daha fazla küme arasında birleşim, kesişim, fark gibi işlemleri gerçekleştiren bir sistem tasarlanmalıdır.
-İşlemler sonucu oluşan kümeler görsel olarak Venn diyagramları şeklinde sunulabilir.
-Gerçek dünyadan örnekler (örneğin, öğrenci kulüpleri, ürün kategorileri) ile küme teorisi uygulamaları yapılır.
+###### Set Reverse Difference
+###### Set Symmetric Difference
+## Features
+###### Real-time graphical representation of set operations
+###### Supports two sets
+###### Highlights the result area on the Venn diagram
+###### Uses multiple data structures: *HashSet*, *Array*, *Stack*, *SortedSet*.
+## Sample Sets preview
+!![image](https://github.com/user-attachments/assets/ba9dc7cb-99cc-4213-8d0f-768eb9cba54c)
+## Download Instructions
+##### Clone the repository:
+`git clone https://github.com/AbdelrahmanAbdelhay/VennDiagram`
+##### Open the solution file in Visual Studio (SetOperationsVennApp.sln)
+##### Build and run the project
