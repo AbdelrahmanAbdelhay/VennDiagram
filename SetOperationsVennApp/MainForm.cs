@@ -195,27 +195,27 @@ namespace KumeIslemleriVenn
                 Graphics g = e.Graphics;
                 g.Clear(Color.White);
 
-                Rectangle rectA = new Rectangle(30, 30, 100, 100);
-                Rectangle rectB = new Rectangle(80, 30, 100, 100);
+                Rectangle rectA = new Rectangle(30, 50, 250, 250);
+                Rectangle rectB = new Rectangle(155, 50, 250, 250);
 
                 g.FillEllipse(new SolidBrush(Color.FromArgb(100, Color.Blue)), rectA);
                 g.FillEllipse(new SolidBrush(Color.FromArgb(100, Color.Red)), rectB);
 
-                g.DrawString("A", new Font("Arial", 10), Brushes.Black, 60, 130);
-                g.DrawString("B", new Font("Arial", 10), Brushes.Black, 140, 130);
+                g.DrawString("A", new Font("Arial", 10), Brushes.Black, 120, 180);
+                g.DrawString("B", new Font("Arial", 10), Brushes.Black, 300, 180);
 
                 string content = string.Join(", ", highlight);
                 Font font = new Font("Arial", 9);
                 if (mode == "intersection")
-                    g.DrawString(content, font, Brushes.Black, 90, 80);
+                    g.DrawString(content, font, Brushes.Black, 155, 170);
                 else if (mode == "union")
-                    g.DrawString(content, font, Brushes.Black, 60, 10);
+                    g.DrawString(content, font, Brushes.Black, 100, 30);
                 else if (mode == "difference")
-                    g.DrawString(content, font, Brushes.Black, 40, 80);
+                    g.DrawString(content, font, Brushes.Black, 40, 165);
                 else if (mode == "reverse_difference")
-                    g.DrawString(content, font, Brushes.Black, 150, 80);
+                    g.DrawString(content, font, Brushes.Black, 285, 165);
                 else if (mode == "symmetric_difference")
-                    g.DrawString(content, font, Brushes.Black, 70, 10);
+                    g.DrawString(content, font, Brushes.Black, 170, 300);
             };
         }
 

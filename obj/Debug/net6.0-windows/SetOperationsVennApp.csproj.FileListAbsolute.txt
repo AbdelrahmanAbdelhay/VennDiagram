@@ -14,3 +14,20 @@ C:\Users\abdel\Downloads\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperat
 C:\Users\abdel\Downloads\SetOperationsVennApp\obj\Debug\net6.0-windows\ref\SetOperationsVennApp.dll
 C:\Users\abdel\Downloads\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.MainForm.resources
 C:\Users\abdel\Downloads\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.csproj.GenerateResource.cache
+D:\Lessons\Data Structure\SetOperationsVennApp\bin\Debug\net6.0-windows\SetOperationsVennApp.exe
+D:\Lessons\Data Structure\SetOperationsVennApp\bin\Debug\net6.0-windows\SetOperationsVennApp.deps.json
+D:\Lessons\Data Structure\SetOperationsVennApp\bin\Debug\net6.0-windows\SetOperationsVennApp.runtimeconfig.json
+D:\Lessons\Data Structure\SetOperationsVennApp\bin\Debug\net6.0-windows\SetOperationsVennApp.dll
+D:\Lessons\Data Structure\SetOperationsVennApp\bin\Debug\net6.0-windows\SetOperationsVennApp.pdb
+D:\Lessons\Data Structure\SetOperationsVennApp\obj\Debug\net6.0-windows\KumeIslemleriVenn.KumeForm.resources
+D:\Lessons\Data Structure\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.csproj.GenerateResource.cache
+D:\Lessons\Data Structure\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Lessons\Data Structure\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.AssemblyInfoInputs.cache
+D:\Lessons\Data Structure\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.AssemblyInfo.cs
+D:\Lessons\Data Structure\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.csproj.CoreCompileInputs.cache
+D:\Lessons\Data Structure\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.sourcelink.json
+D:\Lessons\Data Structure\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.dll
+D:\Lessons\Data Structure\SetOperationsVennApp\obj\Debug\net6.0-windows\refint\SetOperationsVennApp.dll
+D:\Lessons\Data Structure\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.pdb
+D:\Lessons\Data Structure\SetOperationsVennApp\obj\Debug\net6.0-windows\SetOperationsVennApp.genruntimeconfig.cache
+D:\Lessons\Data Structure\SetOperationsVennApp\obj\Debug\net6.0-windows\ref\SetOperationsVennApp.dll

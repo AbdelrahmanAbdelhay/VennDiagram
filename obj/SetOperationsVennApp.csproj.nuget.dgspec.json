@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abdel\\Downloads\\SetOperationsVennApp\\SetOperationsVennApp.csproj": {}
+    "D:\\Lessons\\Data Structure\\SetOperationsVennApp\\SetOperationsVennApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abdel\\Downloads\\SetOperationsVennApp\\SetOperationsVennApp.csproj": {
+    "D:\\Lessons\\Data Structure\\SetOperationsVennApp\\SetOperationsVennApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abdel\\Downloads\\SetOperationsVennApp\\SetOperationsVennApp.csproj",
+        "projectUniqueName": "D:\\Lessons\\Data Structure\\SetOperationsVennApp\\SetOperationsVennApp.csproj",
         "projectName": "SetOperationsVennApp",
-        "projectPath": "C:\\Users\\abdel\\Downloads\\SetOperationsVennApp\\SetOperationsVennApp.csproj",
+        "projectPath": "D:\\Lessons\\Data Structure\\SetOperationsVennApp\\SetOperationsVennApp.csproj",
         "packagesPath": "C:\\Users\\abdel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abdel\\Downloads\\SetOperationsVennApp\\obj\\",
+        "outputPath": "D:\\Lessons\\Data Structure\\SetOperationsVennApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abdel\\AppData\\Roaming\\NuGet\\NuGet.Config",
