@@ -140,7 +140,7 @@ namespace KumeIslemleriVenn
             btnUndo.Name = "btnUndo";
             btnUndo.Size = new System.Drawing.Size(178, 78);
             btnUndo.TabIndex = 9;
-            btnUndo.Text = "Geri Al";
+            btnUndo.Text = "Undo";
             btnUndo.UseVisualStyleBackColor = false;
             btnUndo.Click += btnUndo_Click;
             // 
@@ -151,7 +151,7 @@ namespace KumeIslemleriVenn
             btnClear.Name = "btnClear";
             btnClear.Size = new System.Drawing.Size(178, 84);
             btnClear.TabIndex = 10;
-            btnClear.Text = "Temizle";
+            btnClear.Text = "Delete";
             btnClear.UseVisualStyleBackColor = false;
             btnClear.Click += btnClear_Click;
             // 
