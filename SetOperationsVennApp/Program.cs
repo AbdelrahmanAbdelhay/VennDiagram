@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace SetOperationsVennApp
+namespace KumeIslemleriVenn
 {
     static class Program
     {
@@ -10,7 +10,7 @@ namespace SetOperationsVennApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new KumeForm());
         }
     }
 }
