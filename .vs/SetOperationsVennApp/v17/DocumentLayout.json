@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "D:\\Lessons\\Data Structure\\SetOperationsVennApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7E8A1E40-E155-48CF-9E82-36C7D66C60C1}|SetOperationsVennApp.csproj|d:\\lessons\\data structure\\setoperationsvennapp\\setoperationsvennapp\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7E8A1E40-E155-48CF-9E82-36C7D66C60C1}|SetOperationsVennApp.csproj|D:\\Lessons\\Data Structure\\SetOperationsVennApp\\setoperationsvennapp\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E8A1E40-E155-48CF-9E82-36C7D66C60C1}|SetOperationsVennApp.csproj|solutionrelative:setoperationsvennapp\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E8A1E40-E155-48CF-9E82-36C7D66C60C1}|SetOperationsVennApp.csproj|D:\\Lessons\\Data Structure\\SetOperationsVennApp\\setoperationsvennapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7E8A1E40-E155-48CF-9E82-36C7D66C60C1}|SetOperationsVennApp.csproj|d:\\lessons\\data structure\\setoperationsvennapp\\setoperationsvennapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7E8A1E40-E155-48CF-9E82-36C7D66C60C1}|SetOperationsVennApp.csproj|solutionrelative:setoperationsvennapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -32,9 +32,10 @@
               "RelativeDocumentMoniker": "SetOperationsVennApp\\MainForm.cs",
               "ToolTip": "D:\\Lessons\\Data Structure\\SetOperationsVennApp\\SetOperationsVennApp\\MainForm.cs",
               "RelativeToolTip": "SetOperationsVennApp\\MainForm.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAABAAAAAiAAAA",
+              "ViewState": "AQIAAKQAAAAAAAAAAAAAAEYBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T13:18:42.383Z"
+              "WhenOpened": "2025-05-11T13:18:42.383Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -44,7 +45,7 @@
               "RelativeDocumentMoniker": "SetOperationsVennApp\\MainForm.Designer.cs",
               "ToolTip": "D:\\Lessons\\Data Structure\\SetOperationsVennApp\\SetOperationsVennApp\\MainForm.Designer.cs",
               "RelativeToolTip": "SetOperationsVennApp\\MainForm.Designer.cs",
-              "ViewState": "AQIAAJsBAAAAAAAAAAAAALIBAAA8AAAA",
+              "ViewState": "AQIAACsBAAAAAAAAAAAgwNoAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-11T13:16:33.578Z",
               "EditorCaption": ""
@@ -58,7 +59,8 @@
               "ToolTip": "D:\\Lessons\\Data Structure\\SetOperationsVennApp\\SetOperationsVennApp\\MainForm.cs [Design]",
               "RelativeToolTip": "SetOperationsVennApp\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T13:16:28.138Z"
+              "WhenOpened": "2025-05-11T13:16:28.138Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

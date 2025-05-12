@@ -169,9 +169,9 @@ namespace KumeIslemleriVenn
             // 
             btnUndo.BackColor = System.Drawing.Color.ForestGreen;
             btnUndo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            btnUndo.Location = new System.Drawing.Point(478, 612);
+            btnUndo.Location = new System.Drawing.Point(488, 612);
             btnUndo.Name = "btnUndo";
-            btnUndo.Size = new System.Drawing.Size(143, 154);
+            btnUndo.Size = new System.Drawing.Size(143, 313);
             btnUndo.TabIndex = 9;
             btnUndo.Text = "Undo";
             btnUndo.UseVisualStyleBackColor = false;
@@ -181,9 +181,9 @@ namespace KumeIslemleriVenn
             // 
             btnClear.BackColor = System.Drawing.Color.Red;
             btnClear.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            btnClear.Location = new System.Drawing.Point(478, 772);
+            btnClear.Location = new System.Drawing.Point(11, 925);
             btnClear.Name = "btnClear";
-            btnClear.Size = new System.Drawing.Size(143, 153);
+            btnClear.Size = new System.Drawing.Size(622, 80);
             btnClear.TabIndex = 10;
             btnClear.Text = "Delete";
             btnClear.UseVisualStyleBackColor = false;
@@ -216,7 +216,7 @@ namespace KumeIslemleriVenn
             lstOperationHistory.ItemHeight = 25;
             lstOperationHistory.Location = new System.Drawing.Point(12, 615);
             lstOperationHistory.Name = "lstOperationHistory";
-            lstOperationHistory.Size = new System.Drawing.Size(466, 304);
+            lstOperationHistory.Size = new System.Drawing.Size(480, 320);
             lstOperationHistory.TabIndex = 13;
             lstOperationHistory.SelectedIndexChanged += lstOperationHistory_SelectedIndexChanged;
             // 
