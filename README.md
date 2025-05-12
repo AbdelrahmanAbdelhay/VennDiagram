@@ -8,7 +8,7 @@
 ###### Set Symmetric Difference
 ## Features
 ###### Real-time graphical representation of set operations
-###### Supports two sets
+###### Supports up to 3 sets
 ###### Highlights the result area on the Venn diagram
 ###### Uses multiple data structures: *HashSet*, *Array*, *Stack*, *SortedSet*.
 ## Sample Sets preview
