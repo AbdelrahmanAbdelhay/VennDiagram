@@ -17,6 +17,7 @@ namespace KumeIslemleriVenn
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Panel panelVenn;
         private System.Windows.Forms.ListBox lstOperationHistory;
+        private System.Windows.Forms.Button btnSaveImage;
 
         protected override void Dispose(bool disposing)
         {
@@ -61,6 +62,7 @@ namespace KumeIslemleriVenn
             btnC = new System.Windows.Forms.Button();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
+            btnSaveImage = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // lblSetA
@@ -424,10 +426,22 @@ namespace KumeIslemleriVenn
             label3.TabIndex = 31;
             label3.Text = "Set Calculator";
             // 
+            // btnSaveImage
+            // 
+            btnSaveImage.BackColor = System.Drawing.Color.DarkCyan;
+            btnSaveImage.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnSaveImage.Location = new System.Drawing.Point(632, 925);
+            btnSaveImage.Name = "btnSaveImage";
+            btnSaveImage.Size = new System.Drawing.Size(1050, 80);
+            btnSaveImage.TabIndex = 0;
+            btnSaveImage.Text = "Save Image";
+            btnSaveImage.UseVisualStyleBackColor = false;
+            btnSaveImage.Click += btnSaveImage_Click;
+            // 
             // KumeForm
             // 
             BackColor = System.Drawing.Color.Gainsboro;
-            ClientSize = new System.Drawing.Size(1701, 937);
+            ClientSize = new System.Drawing.Size(1885, 937);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(btnUndo);
@@ -460,6 +474,7 @@ namespace KumeIslemleriVenn
             Controls.Add(txtSetA);
             Controls.Add(lblSetB);
             Controls.Add(lblSetA);
+            Controls.Add(btnSaveImage);
             Name = "KumeForm";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "Küme İşlemleri ve Venn Diyagramı";

@@ -15,6 +15,7 @@ namespace KumeIslemleriVenn
         public KumeForm()
         {
             InitializeComponent();
+
         }
 
         private bool ValidateInput(string input, out string errorMessage)
@@ -544,6 +545,22 @@ namespace KumeIslemleriVenn
             values.Push(result);
         }
 
+        private void btnSaveImage_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "PNG Image|*.png";
+                saveFileDialog.Title = "Save Venn Diagram";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    Bitmap bmp = new Bitmap(panelVenn.Width, panelVenn.Height);
+                    panelVenn.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+                    bmp.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Png);
+                    MessageBox.Show("Image saved successfully!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
 
 
         private void btnOpUnion_Click(object sender, EventArgs e) => txtExpression.Text += " ∪ ";
