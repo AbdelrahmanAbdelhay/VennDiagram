@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SetOperationsVennApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40cd739b5213ece389647643345f6c36bd115e0e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62e1410b2a7afa0d9d3e2fcc65ed9fc566def871")]
 [assembly: System.Reflection.AssemblyProductAttribute("SetOperationsVennApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SetOperationsVennApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
