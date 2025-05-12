@@ -183,11 +183,15 @@ namespace KumeIslemleriVenn
             txtSetA.Text = "";
             txtSetB.Text = "";
             txtSetC.Text = "";
+
+            vennMode = string.Empty;
+            
             lblResult.Text = "Result:";
             operationHistory.Clear();
             undoHistory.Clear();
             lstOperationHistory.Items.Clear();
             panelVenn.Invalidate();
+            
         }
 
 
