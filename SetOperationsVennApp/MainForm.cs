@@ -212,7 +212,7 @@ namespace KumeIslemleriVenn
         }
 
         // Çizim için gereken değişkenler (sınıf seviyesinde tanımla)
-        private HashSet<string> vennA, vennB;
+        private HashSet<string> vennA, vennB, vennC;
         private SortedSet<string> vennResult;
         private string vennMode;
 
@@ -275,7 +275,7 @@ namespace KumeIslemleriVenn
             }
 
         }
-
+      
         private void DrawVennDiagram3(HashSet<string> A, HashSet<string> B, HashSet<string> C, SortedSet<string> _, string mode)
         {
             panelVenn.Invalidate();
@@ -313,6 +313,73 @@ namespace KumeIslemleriVenn
                 {
                     g.DrawString("A∩B∩C: " + string.Join(",", abc), font, Brushes.Black, 660 + shiftX, 360);
                 }
+                else if (mode == "evaluate")
+                {
+                    // Make sure setA, setB, setC are still populated
+
+                    Dictionary<string, List<string>> regions = new()
+    {
+        { "A", new() }, { "B", new() }, { "C", new() },
+        { "AB", new() }, { "AC", new() }, { "BC", new() },
+        { "ABC", new() }
+    };
+
+                    foreach (var item in _)
+                    {
+                        bool inA = vennA.Contains(item);
+                        bool inB = vennB.Contains(item);
+                        bool inC = vennC.Contains(item);
+
+                        if (inA && !inB && !inC) regions["A"].Add(item);
+                        else if (!inA && inB && !inC) regions["B"].Add(item);
+                        else if (!inA && !inB && inC) regions["C"].Add(item);
+                        else if (inA && inB && !inC) regions["AB"].Add(item);
+                        else if (inA && !inB && inC) regions["AC"].Add(item);
+                        else if (!inA && inB && inC) regions["BC"].Add(item);
+                        else if (inA && inB && inC) regions["ABC"].Add(item);
+                    }
+
+                    //Font font = new Font("Arial", 10);
+                    Brush brush = Brushes.Black;
+
+                    g.DrawString("Result: " + string.Join(", ", _), font, brush, 600 + shiftX, 870);
+
+                    // Draw elements in their regions
+                    g.DrawString(string.Join(", ", regions["A"]), font, Brushes.Blue, 355 + shiftX, 240);   // A only
+                    g.DrawString(string.Join(", ", regions["B"]), font, Brushes.Red, 980 + shiftX, 210);    // B only
+                    g.DrawString(string.Join(", ", regions["C"]), font, Brushes.Green, 690 + shiftX, 710);  // C only
+
+                    g.DrawString(string.Join(", ", regions["AB"]), font, Brushes.Purple, 670 + shiftX, 170); // A ∩ B
+                    g.DrawString(string.Join(", ", regions["AC"]), font, Brushes.Teal, 470 + shiftX, 430);   // A ∩ C
+                    g.DrawString(string.Join(", ", regions["BC"]), font, Brushes.Orange, 895 + shiftX, 440); // B ∩ C
+
+                    g.DrawString(string.Join(", ", regions["ABC"]), font, Brushes.Black, 660 + shiftX, 360); // A ∩ B ∩ C
+                }
+
+
+                /*
+                else if (mode == "evaluate")
+                {
+                    string resultContent = string.Join(", ", _.ToList());
+                    g.DrawString("Result: " + resultContent, font, Brushes.Black, 660 + shiftX, 360);
+                }
+                */
+                else
+                {
+                    // Draw all regions
+                    g.DrawString("A∩B∩C: " + string.Join(",", abc), font, Brushes.Black, 660 + shiftX, 360);
+                    g.DrawString("A∩B: " + string.Join(",", ab), font, Brushes.Black, 670 + shiftX, 170);
+                    g.DrawString("A∩C: " + string.Join(",", ac), font, Brushes.Black, 470 + shiftX, 430);
+                    g.DrawString("B∩C: " + string.Join(",", bc), font, Brushes.Black, 895 + shiftX, 440);
+                    g.DrawString("A∖(B∪C): " + string.Join(",", onlyA), font, Brushes.Black, 355 + shiftX, 240);
+                    g.DrawString("B∖(A∪C): " + string.Join(",", onlyB), font, Brushes.Black, 980 + shiftX, 210);
+                    g.DrawString("C∖(A∪B): " + string.Join(",", onlyC), font, Brushes.Black, 690 + shiftX, 710);
+                }
+                /*
+                if (mode == "intersection3")
+                {
+                    g.DrawString("A∩B∩C: " + string.Join(",", abc), font, Brushes.Black, 660 + shiftX, 360);
+                }
                 else
                 {
                     g.DrawString("A∩B∩C: " + string.Join(",", abc), font, Brushes.Black, 660 + shiftX, 360);
@@ -323,7 +390,7 @@ namespace KumeIslemleriVenn
                     g.DrawString("B∖(A∪C): " + string.Join(",", onlyB), font, Brushes.Black, 980 + shiftX, 210);
                     g.DrawString("C∖(A∪B): " + string.Join(",", onlyC), font, Brushes.Black, 690 + shiftX, 710);
                 }
-
+                */
             };
 
 
@@ -430,11 +497,17 @@ namespace KumeIslemleriVenn
                 var result = EvaluateSetExpression(expression, A, B, C);
                 lblResult.Text = "Sonuç: " + string.Join(", ", result);
 
+                // remove if old evaluate function is reused
+                vennA = A;
+                vennB = B;
+                vennC = C;
+                //
+
                 // Operation geçmişine ekle
                 operationHistory.Push("İfade: " + expression + " → " + string.Join(", ", result));
                 undoHistory.Push("İfade: " + expression + " → " + string.Join(", ", result));
                 UpdateOperationHistoryList();
-
+               
                 DrawVennDiagram3(A, B, C, new SortedSet<string>(result), "evaluate");
             }
             catch (Exception ex)
