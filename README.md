@@ -20,7 +20,18 @@
 #### Three sets
 ![image](https://github.com/user-attachments/assets/2b33ae25-599a-406d-b802-0ac89b41c015)
 
+## How to Use
+#### Enter elements into Set A, Set B, and Set C using commas to separate them:
+#### Example: 1, 2, 3
 
+#### You can perform set operations in two ways:
+#### 🔹 By clicking the predefined operation buttons (like A ∩ B, A ∪ C, etc.)
+#### 🔹 Or by typing a custom expression into the expression input box:
+#### Example: (A ∪ B) ∩ C
+
+#### The result will be displayed both as text below and visually in the Venn diagram.
+
+#### You can also use utility buttons like Undo and Clear to manage your actions.
 ## Download Instructions
 ##### Clone the repository:
 `git clone https://github.com/AbdelrahmanAbdelhay/VennDiagram`
